@@ -33,11 +33,10 @@ class UserDetailsController extends Controller
         $user = UserDetails::create($data);
 
 
-        $token = $user->createToken('auth_token')->plainTextToken;
+        // $token = $user->createToken('auth_token')->plainTextToken;
 
         return [
-            'user' => $user,
-            'token' => $token
+            'status' => 'Success'
         ];
     }
 }
