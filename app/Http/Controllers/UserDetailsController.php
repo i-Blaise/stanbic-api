@@ -20,12 +20,16 @@ class UserDetailsController extends Controller
 
         $data = $request->validate([
             'uid' => ['unique:App\Models\UserDetails'],
-            'full_name' => ['required'],
-            'club_name' => ['required'],
+            'first_name' => ['required'],
+            'surname' => ['required'],
+            'tel' => ['required'],
+            'email' => ['required'],
             'shirt_size' => ['required'],
             'dietary_needs' => ['nullable'],
-            'golf_handicap' => ['nullable'],
-            'preferred_travel_time' => ['nullable'],
+            'handicap_id' => ['nullable'],
+            'golf_club' => ['nullable'],
+            'handicap_index' => ['nullable'],
+            'emergency_contact_name' => ['nullable'],
             'emergency_contact' => ['nullable']
         ]);
 

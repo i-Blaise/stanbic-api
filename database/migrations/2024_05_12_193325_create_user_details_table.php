@@ -14,12 +14,16 @@ return new class extends Migration
         Schema::create('user_details', function (Blueprint $table) {
             $table->id();
             $table->uuid('uid')->unique();
-            $table->string('full_name');
-            $table->string('club_name');
+            $table->string('first_name');
+            $table->string('surname');
+            $table->string('tel');
+            $table->string('email');
             $table->string('shirt_size');
             $table->string('dietary_needs')->nullable();
-            $table->string('golf_handicap')->nullable();
-            $table->string('preferred_travel_time')->nullable();
+            $table->string('handicap_id')->nullable();
+            $table->string('golf_club')->nullable();
+            $table->string('handicap_index')->nullable();
+            $table->string('emergency_contact_name')->nullable();
             $table->string('emergency_contact')->nullable();
             $table->timestamps();
         });
