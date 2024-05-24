@@ -15,12 +15,16 @@ class UserDetails extends Model
 
     protected $fillable = [
         'uid',
-        'full_name',
-        'club_name',
+        'first_name',
+        'surname',
+        'tel',
+        'email',
         'shirt_size',
         'dietary_needs',
-        'golf_handicap',
-        'preferred_travel_time',
+        'handicap_id',
+        'golf_club',
+        'handicap_index',
+        'emergency_contact_name',
         'emergency_contact'
     ];
 
